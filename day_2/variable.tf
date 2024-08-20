@@ -10,7 +10,7 @@ variable "instance_type" {
     default = ""
   
 }
-variable "key" {
+variable "keypair" {
     description = "key pair"
     type = string
     default = ""
