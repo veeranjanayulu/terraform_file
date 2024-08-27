@@ -1,0 +1,92 @@
+variable "cidr_block_vpc" {
+    description = "cidr range for vpc"
+    type = string
+    default = "10.0.0.0/16"
+  
+}
+variable "subnet_az_public" {
+    description = "az"
+    type = string
+    default = "ca-central-1a"
+
+  
+}
+variable "subnet_cidr_pulic" {
+    description = "cdir range"
+    type = string
+    default = "10.0.1.0/24"
+  
+}
+variable "subnet_cdir_private" {
+    description = "cdir range"
+    type = string
+    default = "10.0.2.0/24"
+  
+}
+variable "subnet_az_private" {
+    description = "az"
+    type = string
+    default = "ca-central-1a"
+  
+}
+variable "route_cidr" {
+    description = "route cidr range"
+    type = string
+    default = "0.0.0.0/0"
+  
+}
+variable "security_name" {
+    description = "name of security"
+    type = string
+    default = "my_security"
+  
+}
+variable "security_description" {
+    description = "description"
+    type = string
+    default = "allow"
+  
+}
+variable "ingress_descr" {
+    description = "allow all"
+    type = string
+    default = "allow all"
+  
+}
+variable "ingress_from_port" {
+    description = "port"
+    type = string
+    default = "22"
+  
+}
+variable "ingres_to_port" {
+    description = "port of to"
+    type = string
+    default = "22"
+
+  
+}
+variable "ingress_protocol" {
+    description = "protocol"
+    type = string
+    default = "tcp"
+  
+}
+variable "ingress_cidr" {
+    description = "cdir"
+    default =["0.0.0.0/0"]
+  
+}
+variable "subnet_az_public1" {
+    description = "az"
+    type = string
+    default = "ca-central-1b"
+
+  
+}
+variable "subnet_cidr_pulic1" {
+    description = "cdir range"
+    type = string
+    default = "10.0.3.0/24"
+  
+}
