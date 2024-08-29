@@ -7,7 +7,7 @@ module "ec2_instance" {
   instance_type          = "t2.micro"
   key_name               = "react"
   monitoring             = true
-  subnet_id              = "subnet-0f22514bd90c4c17a"
+  subnet_id              = "subnet-0e291d7232ebcfb3e"
 
   tags = {
     Name="terraform_registry"
