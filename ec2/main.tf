@@ -10,7 +10,7 @@ resource "aws_instance" "ec2" {
 
   
 }
-resource "aws_s3_bucket" "s3" {
-    bucket = "prabashrajubucket"
+#resource "aws_s3_bucket" "s3" {
+#    bucket = "prabashrajubucket"
   
-}
+#}
