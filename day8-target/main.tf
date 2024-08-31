@@ -8,9 +8,21 @@ data "aws_subnet" "subnet" {
     values = ["public"]
   }
 }
+data "aws_ami" "ami_id" {
+  filter {
+    name = "image-id"
+    values = [ "ami-07e35c3920b92d884" ]
+  }
+  
+}
+data "aws_ec2_instance_type" "name" {
+
+  instance_type = "t2.micro"
+  
+}
 resource "aws_instance" "instance" {
-    ami = "ami-07e35c3920b92d884"
-    instance_type = "t2.micro"
+    ami = data.aws_ami.ami_id.id
+    instance_type = data.aws_ec2_instance_type.name.instance_type
     key_name = "react"
     subnet_id = data.aws_subnet.subnet.id
   tags = {
