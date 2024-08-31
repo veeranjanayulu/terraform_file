@@ -3,7 +3,7 @@ resource "aws_db_instance" "example" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
-  db_name                 = "mydatabase"  # Correct positioning of the name attribute
+  db_name              = "mydatabase"  # Correct positioning of the name attribute
   username             = "admin"
   password             = "123456789"
   vpc_security_group_ids = ["sg-020ebc9138ba1aca0"]
