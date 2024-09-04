@@ -20,6 +20,15 @@ data "aws_ec2_instance_type" "name" {
   instance_type = "t2.micro"
   
 }
+data "aws_ami" "aws" {
+  depends_on = [aws_instance.instance]
+
+  filter {
+    name   = "name"
+    values = ["my-ami-name*"]
+  }
+}
+
 resource "aws_instance" "instance" {
     ami = data.aws_ami.ami_id.id
     instance_type = data.aws_ec2_instance_type.name.instance_type
