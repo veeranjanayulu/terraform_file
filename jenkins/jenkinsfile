@@ -1,0 +1,24 @@
+node {
+    
+    stage('clone') { 
+        git branch: 'main', url: 'https://github.com/veeranjanayulu/terraform_file.git'
+    }
+    stage('init') {
+        dir('jenkins'){
+            sh "terraform init"
+        }
+        
+    }
+    stage("plan") {
+        dir("jenkins"){
+            sh "terraform plan "
+        }
+        
+    }
+    stage("plan") {
+        dir("jenkins"){
+            sh "terraform apply -auto-approve "
+        }
+        
+    }
+}
