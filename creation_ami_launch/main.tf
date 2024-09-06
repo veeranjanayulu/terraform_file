@@ -6,7 +6,7 @@ resource "aws_instance" "ec2" {
     instance_type = "t2.small"
     key_name = "react"
     tags = {
-      Name="tarraform"
+      Name="jenkins"
     }
   
 }
