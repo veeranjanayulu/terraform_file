@@ -16,7 +16,7 @@ resource "aws_ami_from_instance" "ami" {
   description        = "An AMI from an example instance"
 
   tags = {
-    Name = "terraform"
+    Name = "ec2"
   }
 }
 resource "aws_launch_template" "example" {
