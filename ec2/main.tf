@@ -7,6 +7,9 @@ resource "aws_instance" "ec2" {
     instance_type = "t2.micro"
     key_name = "react"
     availability_zone = "ca-central-1a"
+tag{
+Name ="terraform"
+}
 
   
 }
