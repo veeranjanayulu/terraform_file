@@ -1,4 +1,5 @@
 provider "aws" {
+    region = "ca-central-1"
   
 }
 
@@ -7,12 +8,14 @@ resource "aws_instance" "ec2" {
     instance_type = "t2.micro"
     key_name = "react"
     availability_zone = "ca-central-1a"
-tag{
-Name ="ec2"
+    tags = {
+      Name ="instance"
+    }
+
 }
 
   
-}
+
 #resource "aws_s3_bucket" "s3" {
 #    bucket = "prabashrajubucket"
   
